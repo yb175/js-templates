@@ -18,6 +18,10 @@ arr.shift();        // remove from front - O(n)
 arr.unshift(x);     // add to front - O(n)
 arr.slice(l, r);    // [l, r)
 arr.splice(i, 1);   // remove 1 element
+const board = Array.from(
+    { length: n },
+    () => Array(n).fill('.')
+); // Generating a 2D array
 
 // ==================== 3. SORTING ====================
 // Numbers
