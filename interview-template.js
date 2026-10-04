@@ -23,6 +23,9 @@ const board = Array.from(
     () => Array(n).fill('.')
 ); // Generating a 2D array
 
+// Always use this 
+Array.from({ length: n }, () => [])
+
 // ==================== 3. SORTING ====================
 // Numbers
 arr.sort((a, b) => a - b);          // ascending
