@@ -378,6 +378,66 @@ s += "hello";
 s += " world";
 const output = `Payment ${id} paid ${amount}`;
 
+// ==================== SLICE ====================
+
+// Syntax: arr.slice(start, end)
+// start = inclusive, end = exclusive
+// Does NOT modify the original array (STRICTLY TAKE CARE)
+
+const arr = [10, 20, 30, 40, 50];
+
+arr.slice(1, 4);  // [20, 30, 40]
+arr.slice(2);     // [30, 40, 50]
+arr.slice(-2);    // [40, 50]
+arr.slice(0, -1); // [10, 20, 30, 40]
+arr.slice();      // Shallow copy of entire array
+
+// Remove first element from the returned copy
+arr.slice(1);     // [20, 30, 40, 50]
+
+// ==================== STRING SLICE ====================
+
+// Syntax: str.slice(start, end)
+// start = inclusive, end = exclusive
+// Does NOT modify the original string
+
+let s = "JavaScript";
+
+s.slice(0, 4);   // "Java"
+s.slice(4);      // "Script"
+s.slice(-6);     // "Script"
+s.slice(0, -6);  // "Java"
+
+// Remove first character
+s.slice(1);
+
+// Remove last character
+s.slice(0, -1);
+
+// Remove first and last characters
+s.slice(1, -1);
+
+// ==================== SLICE FOR PARSING ====================
+
+// Remove surrounding double quotes
+let literal = '"FR"';
+
+if (literal.startsWith('"') && literal.endsWith('"')) {
+    literal = literal.slice(1, -1);
+}
+
+console.log(literal); // "FR"
+
+// Extract text after a marker
+let str = "country == FR";
+let idx = str.indexOf("==");
+
+let left = str.slice(0, idx).trim();
+let right = str.slice(idx + 2).trim();
+
+console.log(left);  // "country"
+console.log(right); // "FR"
+
 
 // ==================== 23. COMPLEXITY ====================
 //
