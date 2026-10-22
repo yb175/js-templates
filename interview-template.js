@@ -438,6 +438,34 @@ let right = str.slice(idx + 2).trim();
 console.log(left);  // "country"
 console.log(right); // "FR"
 
+// ==================== INDEX OF ====================
+
+// Returns the index of the first occurrence.
+// Returns -1 if the value is not found.
+
+let s = "JavaScript";
+
+s.indexOf("a");      // 1
+s.indexOf("Script"); // 4
+s.indexOf("xyz");    // -1
+
+// Start searching from a given index
+s.indexOf("a", 2);   // 3
+
+// Check whether a substring exists
+if (s.indexOf("Script") !== -1) {
+    console.log("Found");
+}
+
+// Find a delimiter for parsing
+let condition = 'country == "FR"';
+let idx = condition.indexOf("==");
+
+let left = condition.slice(0, idx).trim();
+let right = condition.slice(idx + 2).trim();
+
+console.log(left);  // country
+console.log(right); // "FR"
 
 // ==================== 23. COMPLEXITY ====================
 //
