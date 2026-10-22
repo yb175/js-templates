@@ -470,6 +470,21 @@ let right = condition.slice(idx + 2).trim();
 console.log(left);  // country
 console.log(right); // "FR"
 
+// ============================DATE API==========================================
+const date = new Date(`${dateString}T00:00:00Z`); // conversion of string to date in UTC 
+date.toISOString().slice(0, 10); // Date to string 
+Date.now();                   // Current timestamp in ms
+
+date.getTime();               // Timestamp in ms
+date.toISOString();           // ISO timestamp string
+
+date.getUTCFullYear();        // Year
+date.getUTCMonth();           // Month: 0–11
+date.getUTCDate();            // Day of month: 1–31
+date.getUTCDay();             // Day of week: Sunday = 0
+
+date.setUTCDate(date.getUTCDate() + 1); // Add one day
+
 // ==================== 23. COMPLEXITY ====================
 //
 // Array push/pop       O(1) amortized
