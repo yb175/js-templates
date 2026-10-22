@@ -5,11 +5,12 @@
 // ==================== 1. PARSING ====================
 const x = Number("123");
 const y = parseInt("123", 10);
-const parts = str.split(",");
+const parts = str.split(",");  // Multiple white spaces use str.split(/\s+/)  
 const words = str.trim().split(/\s+/);
 const result = arr.join(",");
 const clean = str.trim();
 const lower = str.toLowerCase();
+
 
 // ==================== 2. ARRAYS ====================
 arr.push(x);        // add at end
