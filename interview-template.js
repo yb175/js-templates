@@ -11,6 +11,8 @@ const result = arr.join(",");
 const clean = str.trim();
 const lower = str.toLowerCase();
 
+// =============== Map=============
+parsedFields = parsedFields.map((x) => x.trim()); 
 
 // ==================== 2. ARRAYS ====================
 arr.push(x);        // add at end
