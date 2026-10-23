@@ -485,6 +485,15 @@ date.getUTCDay();             // Day of week: Sunday = 0
 
 date.setUTCDate(date.getUTCDate() + 1); // Add one day
 
+// ===============??=====================================
+function getLimit(limit) {
+    return limit ?? 10;
+}
+
+console.log(getLimit(undefined)); // 10
+console.log(getLimit(0));         // 0
+console.log(getLimit(5));         // 5
+
 // ==================== 23. COMPLEXITY ====================
 //
 // Array push/pop       O(1) amortized
